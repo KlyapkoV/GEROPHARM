@@ -145,12 +145,12 @@ with col3:
                    )
     if int(df['Факт'].sum() - df['План'].sum()) >= 100:
         st.markdown(
-                    f"<h1 style='text-align: center; color: #008000; font-size:30px;'>(🡅{plan_execution})</h1>"
+                    f"<h1 style='text-align: center; color: #008000; font-size:30px;'>(+{plan_execution})</h1>"
                     , unsafe_allow_html=True
                    )
     else:
         st.markdown(
-                    f"<h1 style='text-align: center; color: #FF8C00; font-size:30px;'>(🡇{plan_execution})</h1>"
+                    f"<h1 style='text-align: center; color: #FF8C00; font-size:30px;'>({plan_execution})</h1>"
                     , unsafe_allow_html=True
                    )
 
@@ -177,12 +177,12 @@ with col4:
             (df['Факт'].sum() / df['Факт предыдущий период'].sum() - 1) * 100
     ) > 0:
         st.markdown(
-            f"<h1 style='text-align: center; color: #008000; font-size:30px;'>(🡅{sales_growth})</h1>"
+            f"<h1 style='text-align: center; color: #008000; font-size:30px;'>(+{sales_growth})</h1>"
             , unsafe_allow_html=True
         )
     else:
         st.markdown(
-                    f"<h1 style='text-align: center; color: #FF8C00; font-size:30px;'>(🡇{sales_growth})</h1>"
+                    f"<h1 style='text-align: center; color: #FF8C00; font-size:30px;'>({sales_growth})</h1>"
                     , unsafe_allow_html=True
                    )
 
